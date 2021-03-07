@@ -1,5 +1,2 @@
-export const match = <R>(tests: { test: boolean, value: R }[]): R => {
-    const results = tests.filter(test => test.test);
-    //@ts-ignore
-    return results.length > 0 ? results[0].value : null;
-}
+// @ts-ignore
+export const match = <R>(tests: [boolean, R][]): R => tests.filter(([test])=>test).map(([_,value])=>value)[0];
