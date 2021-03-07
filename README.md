@@ -16,3 +16,5 @@ console.log(match([
 ])); //two
 
 ```
+
+Specify a type to match like `match<string>([...])` to constrain the type if it cannot be infered.
